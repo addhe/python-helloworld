@@ -105,4 +105,7 @@ or from all app
 `$kubectl get ingress`
 
 ## Testing curl with hostname
-`curl http://127.0.0.1:8080 --header "Host: hello-world.oppna.ai"`
+`$curl http://127.0.0.1:8080 --header "Host: hello-world.oppna.local"`
+
+# Deploy hpa ( kindly adjust the file hpa.yaml cpu utilization )
+`$kubectl apply -f hpa.yaml`
