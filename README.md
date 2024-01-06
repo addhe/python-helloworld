@@ -81,13 +81,17 @@ Hi hi, Hello world Writen with Python using Flask and Waitress - version 0.1.0`
 ## Check logs pods and the traffic distributed to all replicas
 
 `$kubectl get pods`                                           
-NAME                        READY   STATUS      RESTARTS   AGE
-flask-app-557594444-thw4c   1/1     Running     0          17m
-flask-app-557594444-99rvg   1/1     Running     0          17m
-flask-app-557594444-xv4lc   1/1     Running     0          17m
+
+|NAME                        |READY   |STATUS      |RESTARTS   |AGE|
+|----------------------------|--------|------------|-----------|---|
+|flask-app-557594444-thw4c   |1/1     |Running     |0          |17m|
+|flask-app-557594444-99rvg   |1/1     |Running     |0          |17m|
+|flask-app-557594444-xv4lc   |1/1     |Running     |0          |17m|
 
 `$kubectl logs pod/flask-app-557594444-thw4c`
+
 `$kubectl logs pod/flask-app-557594444-99rvg`
+
 `$kubectl logs pod/flask-app-557594444-xv4lc`
 
 or from all app
@@ -98,7 +102,9 @@ or from all app
 
 ## Deploy ingress host
 `$kubectl apply -f ingress.yaml`
+
 `$kubectl port-forward -n kube-system service/traefik 8080:80`
+
 `$kubectl apply -f ingress-host.yaml`
 
 ## Check ingress hosts
