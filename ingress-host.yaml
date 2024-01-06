@@ -7,7 +7,7 @@ metadata:
     kubernetes.io/ingress.class: traefik
 spec:
   rules:
-  - host: "hello-world.oppna.ai"
+  - host: "hello-world.oppna.local"
     http:
       paths:
       - path: /
