@@ -12,9 +12,7 @@ app = Flask(__name__)
 @app.route("/", methods=["GET"])
 def home():
     logger.info("/ invoked")
-    return (
-        "Hi hi, Hello world Writen with Python using Flask and Waitress - version 0.1.0"
-    )
+    return "Hi, Hello world Writen With Python Using Flask and Waitress - version 0.1.2"
 
 
 if __name__ == "__main__":

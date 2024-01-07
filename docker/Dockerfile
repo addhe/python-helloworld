@@ -1,13 +1,17 @@
 FROM python:3.7-alpine
 RUN addgroup -S app && adduser app -S -G app
 
-WORKDIR /home/app/
+# Set Working directory
+WORKDIR /app
 
-COPY requirements.txt .
+# Copy files from src to dest
+COPY src/ .
 
+# Using root user
 USER root
+
+# Make sure all requirements are installed
 RUN pip install -r requirements.txt
-COPY app.py .
 
 RUN chown -R app:app ./
 
